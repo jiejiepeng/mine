@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Login-to-KY-World</title>
+    <link rel="icon" href="../kj.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../kj.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://static.biaojiepay.com/biaojiepay/css/animate.min.css"/>
+    <link rel="stylesheet" href="https://static.biaojiepay.com/biaojiepay/css/swiper-3.4.1.min.css"/>
+    <script src="https://static.biaojiepay.com/biaojiepay/js/jquery-3.1.1.min.js"></script>
+    <script src="https://static.biaojiepay.com/biaojiepay/js/swiper-3.4.1.min.js"></script>
+    <script src="https://static.biaojiepay.com/biaojiepay/js/swiper.animate1.0.2.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-family: 微软雅黑;
+        }
+        /*背景漂漂亮亮的*/
+        .swiper-container,.swiper-wrapper,.swiper-slide{
+            width: 100%;
+            height: 100%;
+        }
+        .fir{
+            background: url("http://biaojiepay.oss-cn-shenzhen.aliyuncs.com/biaojiepay/jack/ky-login-bg1.jpg");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        .sec{
+            background: url("http://biaojiepay.oss-cn-shenzhen.aliyuncs.com/biaojiepay/jack/ky-login-bg2.jpg");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        .thr{
+            background: url("http://biaojiepay.oss-cn-shenzhen.aliyuncs.com/biaojiepay/jack/ky-login-bg3.jpg");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        /*背景漂漂亮亮的结束*/
+        /*登陆窗口*/
+        .container{
+            width: 320px;
+            height: 350px;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            margin-left: -150px;
+            border-radius:30px;
+            z-index: 999;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: 微软雅黑;
+            font-weight: 500;
+            color: #ffffff;
+        }
+        .login-window{
+            width: 300px;
+            height: 200px;
+            top: 30%;
+            left: 50%;
+            border-radius:30px;
+            box-shadow: 0px 0px 5px #ccc;
+            padding-top: 20px;
+            overflow: hidden;
+            transition: all 1s ease;
+        }
+        input{
+            border: none;
+            background: rgb(218, 218, 218);
+            border-radius: 10px;
+        }
+        .user{
+            width: 250px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .username{
+            width: 100%;
+            height: 100%;
+            font-family: 微软雅黑;
+            color: #333333;
+            text-indent: 20px;
+            font-size: 15px;
+        }
+        .username:focus{
+            box-shadow: 0px 0px 5px yellow;
+        }
+        .pass{
+            width: 250px;
+            height: 50px;
+            margin: 20px auto;
+        }
+        .password{
+            width: 100%;
+            height: 100%;
+            font-family: 微软雅黑;
+            color: #333;
+            text-indent: 20px;
+            font-size: 15px;
+        }
+        .password:focus{
+            box-shadow: 0px 0px 5px yellow;
+        }
+        .login{
+            display: block;
+            font-size: 30px;
+            width: 30px;
+            color: aqua;
+            margin: 0 auto;
+        }
+        .login:hover{
+            text-decoration: none;
+        }
+        .login:link{
+            text-decoration: none;
+            color: aqua;
+        }
+        /*登陆窗口结束*/
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+     <div class="swiper-wrapper">
+        <div class="swiper-slide fir"></div>
+        <div class="swiper-slide sec"></div>
+        <div class="swiper-slide thr"></div>
+     </div>
+</div>
+<div class="container">
+    <h1>登陆&Login</h1>
+    <div class="login-window">
+        <div class="user">
+            <input type="text" class="username" maxlength="10" placeholder="唯一的账号"/>
+        </div>
+        <div class="pass">
+            <input type="password" maxlength="12" class="password" placeholder="却不是唯一的密码"/>
+        </div>
+            <a href="javascript:;" class="glyphicon glyphicon-circle-arrow-right login"></a>
+        <div class="welcome"></div>
+    </div>
+    <p style="text-align: center;margin-top: 20px;color: #ffffff;">注：<lable class="tip">老子是不会提供任何注册的</lable></p>
+</div>
+    <script>
+        /*swiper*/
+        var swiper = new Swiper('.swiper-container',{
+            loop:true,
+            effect:'fade',
+            autoplay:5000,
+            speed:1000,
+            autoplayDisableOnInteraction:false,
+        });
+        /*swiper结束*/
+        $(function(){
+            $('.login').hover(function(){
+                $(this).addClass('animated rubberBand');
+            },function(){
+                $(this).removeClass('animated rubberBand')
+            })/*登陆按钮的移入样式*/
+            $('.login').click(function(){
+                var username = $('.username').val();
+                var password = $('.password').val();
+                if(username == 'jack' && password == '123456'){
+                    $('.login').removeClass('glyphicon glyphicon-circle-arrow-right').addClass('glyphicon glyphicon-ok-circle');
+                    $('.tip').text('你终于来了');
+                    $('.tip').css({'color':'aqua'})
+                    var tt = setTimeout(function(){
+                        $('.container').addClass('animated flipOutY')
+                    },2500)
+                    var timer2 = setTimeout(function(){
+                        window.open('mine.html','_self');
+                    },3000)
+                }
+                else{
+                    $('.login-window').addClass('animated shake');
+                    var timer = setTimeout(function(){
+                        $('.login-window').removeClass('animated shake');
+                    },1000)
+                    $('.tip').css({'color':'red'});
+                    $('.tip').text('哪来的傻逼');
+                    var tip = setTimeout(function(){
+                        $('.tip').text('老子是不会提供任何注册的');
+                        $('.tip').css({'color':'#fff'});
+                    },2000)
+                }
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>伪类</title>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <style>
+        .box{
+            width: 300px;
+            height: 500px;
+            background: #ffffff;
+            margin-bottom: 0px;
+            color: #ffffff;
+            font-size: 20px;
+            font-family: 微软雅黑;
+            position: relative;
+            float: left;
+        }
+       /* .box:after{
+            content:'你才是猪吗？' ;
+        }
+        .box:before{
+            content: 'MDZZ';
+        }*/
+        .bb,.bb2,.bb3,.bb4{
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background: #333;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        .bb2{
+            transform: translateX(-50px);
+            transition: all 0.25s 0s;
+            opacity: 0;
+        }
+        .bb3{
+            transform: translateX(30px);
+            transition: all 0.25s 0.2s;
+            opacity: 0;
+        }
+        .bb4{
+            transform: translateX(-50px);
+            transition: all 0.25s 0.5s;
+            opacity: 0;
+        }
+        /*第一个box*/
+        .box2{
+            width: 300px;
+            height: 500px;
+            background: #ffffff;
+            margin-bottom: 0px;
+            color: #ffffff;
+            font-size: 25px;
+            font-family: 微软雅黑;
+            float: left;
+        }
+        .cc,.cc2,.cc3,.cc4{
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background: #333;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+        .cc{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .cc2{
+            transition: all 0.1s 0s;
+        }
+        .cc3{
+            transition: all 0.1s 0.05s;
+        }
+        .cc4{
+            transition: all 0.1s 0.1s;
+        }
+      /*  .box2 img{
+            width: 100%;
+            height: 100%;
+            border-radius: 75%;
+        }*/
+        /*第二个box结束*/
+        .box3{
+            width: 300px;
+            height: 500px;
+            background: #ffffff;
+            margin-bottom: 0px;
+            color: #ffffff;
+            font-size: 25px;
+            font-family: 微软雅黑;
+            float: left;
+        }
+        .dd,.dd2,.dd3,.dd4{
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background: #333;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transform: scale(2);
+            opacity: 0;
+        }
+        .dd {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        .dd2{
+            transition: all 0.2s 0s;
+        }
+        .dd3{
+            transition: all 0.2s 0.1s;
+        }
+        .dd4{
+            transition: all 0.2s 0.2s;
+        }
+        /*第三个box结束*/
+        .box4{
+            width: 300px;
+            height: 500px;
+            background: #ffffff;
+            margin-bottom: 0px;
+            color: #ffffff;
+            font-size: 25px;
+            font-family: 微软雅黑;
+            float: left; 
+        }
+        .ee,.ee2,.ee3,.ee4{
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background: #333;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transform: rotateY(180deg);
+            opacity: 0; 
+        }
+        .ee{
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+        .ee2{
+            transition:all 0.5s 0s;
+        }
+        .ee3{
+            transition:all 0.5s 0.1s;
+        }
+        .ee4{
+            transition:all 0.5s 0.2s;
+        }
+        /*第四个box结束*/
+        .box5{
+            width: 300px;
+            height: 500px;
+            background: #ffffff;
+            margin-bottom: 0px;
+            color: #ffffff;
+            font-size: 25px;
+            font-family: 微软雅黑;
+            float: left;
+        }
+        .ff,.ff2,.ff3,.ff4{
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background: #333;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+        .ff{
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+        .ff2{
+            transition: all 0.5s 0s;
+        }
+        .ff3{
+            transition: all 0.5s 0.3s;
+        }
+        .ff4{
+            transition: all 0.5s 0.6s;
+        }
+        /*第五个box结束*/
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="bb"><h1>1</h1></div>
+    <div class="bb2"><h1>2</h1></div>
+    <div class="bb3"><h1>3</h1></div>
+    <div class="bb4"><h1>4</h1></div>
+</div> <!--例子1-->
+<div class="box2">
+    <div class="cc"><h1>2</h1></div>
+    <div class="cc2"><h1>2</h1></div>
+    <div class="cc3"><h1>3</h1></div>
+    <div class="cc4"><h1>4</h1></div>
+       <!-- <img src="http://img.hb.aicdn.com/c3e5ba2ffe1787efa65e8d2f143026e10414ab65116bbb-7q3rEe_fw236g" alt=""/>-->
+</div><!--例子2-->
+<div class="box3">
+    <div class="dd"><h1>3</h1></div>
+    <div class="dd2"><h1>2</h1></div>
+    <div class="dd3"><h1>3</h1></div>
+    <div class="dd4"><h1>4</h1></div>
+</div><!--例子3-->
+<div class="box4">
+    <div class="ee"><h1>4</h1></div>
+    <div class="ee2"><h1>2</h1></div>
+    <div class="ee3"><h1>3</h1></div>
+    <div class="ee4"><h1>4</h1></div>
+</div><!--例子4-->
+<div class="box5">
+    <div class="ff"><h1>5</h1></div>
+    <div class="ff2"><h1>2</h1></div>
+    <div class="ff3"><h1>3</h1></div>
+    <div class="ff4"><h1>4</h1></div>
+</div><!--例子5-->
+
+<!--页面效果结束-->
+<script>
+    $(function () {
+        $('.bb').click(function(){
+            if($('.bb2').css("opacity") == 0)
+            {
+                $('.bb2,.bb4').css({'transform':'translateX(0px)','opacity':'1'})
+                $('.bb3').css({'transform':'translateX(0px)','opacity':'1'})
+                $(this).css({'color':'aqua'});
+                $(this).children('h1').text('咻咻咻');
+            }
+            else{
+                $('.bb2,.bb4').css({'transform':'translateX(30px)','opacity':'0'})
+                $('.bb3').css({'transform':'translateX(-30px)','opacity':'0'})
+                $(this).css({'color':'#fff'})
+                $(this).children('h1').text('1');
+            }
+        });/*例子1*/
+        $('.cc').click(function () {
+            if($('.cc2').css("opacity") == 0){
+                $('.cc2,.cc3,.cc4').css({'transform':'translateY(0px)','opacity':'1'})
+                $(this).css({'color':'aqua'})
+                $(this).children('h1').text('哗啦啦');
+            }
+            else{
+                $('.cc2,.cc3,.cc4').css({'transform':'translateY(-30px)','opacity':'0'})
+                $(this).css({'color':'#fff'});
+                $(this).children('h1').text('2');
+            }
+        });/*例子2*/
+        $('.dd').click(function(){
+            if($('.dd2').css("opacity") == 0){
+                $('.dd2,.dd3,.dd4').css({'transform':'scale(1)','opacity':'1'});
+                $(this).css({'color':'aqua'});
+                $(this).children('h1').text('哒哒哒');
+            }
+            else{
+                $('.dd2,.dd3,.dd4').css({'transform':'scale(2)','opacity':'0'});
+                $(this).css({'color':'#fff'});
+                $(this).children('h1').text('3');
+            }
+        });/*例子3*/
+        $('.ee').click(function(){
+            if($('.ee2').css("opacity") == 0){
+                $('.ee2,.ee3,.ee4').css({'transform':'rotateY(0deg)','opacity':'1'});
+                $(this).css({'color':'aqua'});
+                $(this).children('h1').text('翻翻翻');
+            }
+            else{
+                $('.ee2,.ee3,.ee4').css({'transform':'rotateY(180deg)','opacity':'0'});
+                $(this).css({'color':'#fff'})
+                $(this).children('h1').text('4');
+            }
+        });/*例子4*/
+        $('.ff').click(function(){
+            if($('.ff2').css("opacity") == 0){
+                $('.ff2,.ff3,.ff4').css({'transform':'rotate(0deg)','opacity':'1'});
+                $(this).css({'color':'aqua'});
+                $(this).children('h1').text('砍砍砍');
+            }
+            else{
+                $('.ff2,.ff3,.ff4').css({'transform':'rotate(90deg)','opacity':'0'});
+                $(this).css({'color':'#fff'});
+                $(this).children('h1').text('5');
+            }
+        });/*例子5*/
+    })
+</script>
+</body>
+</html>

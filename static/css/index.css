@@ -1,0 +1,332 @@
+
+@media only screen and (max-width: 1000px) {
+   .myinfo,.myinfo2,.myinfo3{
+       display: none;
+   }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+}
+.container{
+    margin: 0;
+    padding: 0;
+}
+.row{
+    margin: 0;
+    padding: 0;
+}
+.mian{
+    width: 100%;
+    height: 100%;
+    background: url("http://oggunxh4k.bkt.clouddn.com/sky1.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    display: none;
+}
+
+/*引导页面开始*/
+.loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("http://oggunxh4k.bkt.clouddn.com/sky4.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    transition:all 1s;
+}
+/*动画部分*/
+.zuishuai{
+    width: 50%;
+    height: 30%;
+    position: fixed;
+   /* background: url("http://oggunxh4k.bkt.clouddn.com/zuishuai.png") no-repeat;*/
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    top: -40%;
+    left: 25%;
+}
+
+/*旋转魔方*/
+.zuishuai ul{
+    list-style-type: none;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: come 20s infinite linear;
+
+}
+.zuishuai ul li{
+    width: 200px;
+    height: 200px;
+    font-size: 25px;
+    line-height: 200px;
+    text-align: center;
+    position: absolute;
+}
+@keyframes come {
+    0%{
+        transform: rotateX(0deg) rotateY(0deg) ;
+    }
+
+    50%{
+        transform: rotateX(720deg) rotateY(720deg) ;
+    }
+
+    100%{
+        transform: rotateX(1440deg) rotateY(1440deg) ;
+    }
+}
+
+.zuishuai ul li:nth-of-type(1){
+    background: url("http://oggunxh4k.bkt.clouddn.com/keji1.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-transform: translateZ(100px);
+    -moz-transform: translateZ(100px);
+    -ms-transform: translateZ(100px);
+    -o-transform: translateZ(100px);
+    transform: translateZ(100px);
+}
+.zuishuai ul li:nth-of-type(2){
+    background: url("http://oggunxh4k.bkt.clouddn.com/keji2.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-transform: rotateX(-90deg) translateZ(100px);
+    -moz-transform: rotateX(-90deg) translateZ(100px);
+    -ms-transform: rotateX(-90deg) translateZ(100px);
+    -o-transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.zuishuai ul li:nth-of-type(3){
+    background: url("http://oggunxh4k.bkt.clouddn.com/keji3.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-transform: rotateX(-180deg) translateZ(100px);
+    -moz-transform: rotateX(-180deg) translateZ(100px);
+    -ms-transform: rotateX(-180deg) translateZ(100px);
+    -o-transform: rotateX(-180deg) translateZ(100px);
+    transform: rotateX(-180deg) translateZ(100px);
+}
+.zuishuai ul li:nth-of-type(4){
+    background: url("http://oggunxh4k.bkt.clouddn.com/keji4.jpg") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-transform: rotateX(-270deg) translateZ(100px);
+    -moz-transform: rotateX(-270deg) translateZ(100px);
+    -ms-transform: rotateX(-270deg) translateZ(100px);
+    -o-transform: rotateX(-270deg) translateZ(100px);
+    transform: rotateX(-270deg) translateZ(100px);
+}
+.zuishuai ul li:nth-of-type(5){
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+    -moz-transform: rotateY(90deg) translateZ(100px);
+    -ms-transform: rotateY(90deg) translateZ(100px);
+    -o-transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(100px);
+}
+.zuishuai ul li:nth-of-type(6){
+    -webkit-transform: rotateY(-90deg) translateZ(100px);
+    -moz-transform: rotateY(-90deg) translateZ(100px);
+    -ms-transform: rotateY(-90deg) translateZ(100px);
+    -o-transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+/*进入按钮*/
+.goto{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    margin-top: 30%;
+}
+.goto h1{
+    cursor: pointer;
+    animation:gogogo 5s 4;
+}
+@keyframes gogogo {
+    0%{
+        color: #FF00FF;
+        transform: rotate(30deg);
+    }
+    25%{
+        color: #FF7F00;
+        transform: rotate(-30deg);
+    }
+    50%{
+        color: #F08080;
+        transform: rotate(30deg);
+    }
+    75%{
+        color: #E0FFFF;
+        transform: rotate(-30deg);
+    }
+    100%{
+        color: #D02090;
+        transform: rotate(30deg);
+    }
+}
+/*loading页面结束*/
+.header{
+    width: 70%;
+    height: 10%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+
+}
+.header ul{
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+}
+.header ul li{
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    font-family: 微软雅黑;
+    color: #ffffff;
+    font-size: 150%;
+    padding: 25px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.header ul li:hover{
+    color: #CD3700;
+    font-size: 200%;
+}
+.underline{
+    width: 25%;
+    height: 3px;
+    bottom: 0;
+    left: -25%;
+    background: #ffffff;
+    position: absolute;
+}
+/*关于我的*/
+.myinfo{
+    position: fixed;
+    width: 20%;
+    height: 40%;
+    background: rgba(255,255,255,0.3);
+    top:12%;
+    left:0%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all  0.5s;
+    -ms-transition: all  0.5s;
+    -o-transition: all  0.5s;
+    transition: all  0.5s;
+    cursor: pointer;
+}
+
+.fir{
+    padding-top: 20px;
+    text-align: center;
+    color: aqua;
+    border-bottom: 1px solid #cccccc;
+}
+.second{
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid #cccccc;
+    display: none;
+}
+.second>ul{
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+}
+.second>ul>li{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+.second>ul>li:nth-of-type(1){
+    font-size: 200%;
+    padding-top: 50px;
+}
+.ability{
+    list-style-type: none;
+    font-size: 100%;
+}
+.ability li:hover{
+    color: yellow;
+    font-size: 150%;
+}
+.third{
+    width: 100%;
+    height: auto;
+    display: none;
+    background: rgba(0,0,0,0.7);
+    color: #ffffff;
+}
+.title{
+    font-size: 200%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.contents{
+    margin-left: 30%;
+}
+.contents ul{
+    list-style-type: none;
+}
+.contents ul li{
+    font-size: 120%;
+    margin-top: 25px;
+}
+/*关于我的结束*/
+/*关于第二个我*/
+.myinfo2{
+    position: fixed;
+    width: 20%;
+    height: 40%;
+    background: rgba(255,255,255,0.3);
+    top:12%;
+    right: 0%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all  0.5s;
+    -ms-transition: all  0.5s;
+    -o-transition: all  0.5s;
+    transition: all  0.5s;
+    cursor: pointer;
+}
+/*关于第二个我结束*/
+/*第三个我*/
+.myinfo3{
+    position: fixed;
+    width: 20%;
+    height: 40%;
+    background: rgba(255,255,255,0.3);
+    top:100%;
+    left:40%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all  0.5s;
+    -ms-transition: all  0.5s;
+    -o-transition: all  0.5s;
+    transition: all  0.5s;
+    cursor: pointer;
+}
+/*第三个我结束*/

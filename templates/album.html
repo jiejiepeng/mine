@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Who am i, and who are you</title>
+    <link rel="icon" href="../kj.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../kj.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/animate.min.css"/>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../static/js/zooming.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       html,body{
+            width: 100%;
+            height: 100%;
+            background: rgb(73, 74, 95);
+            overflow: hidden;
+        }
+       .main{
+           width: 100%;
+           height: 400%;
+       }
+        .box1{
+            width: 100%;
+            height: 25%;
+            background: aqua;
+        }
+        .box2{
+            width: 100%;
+            height: 25%;
+            background: #cccccc;
+        }
+        .box3{
+            width: 100%;
+            height: 25%;
+            background: red;
+        }
+        .box4{
+            width: 100%;
+            height: 25%;
+            background: green;
+        }
+        .myol{
+            width: 20px;
+            height: 100px;
+            list-style-type: none;
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            margin-top: -50px;
+        }
+        .myol li{
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <div class="main">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    </div>
+    <ol class="myol">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <script>
+        $(function(){
+            $('.myol li').click(function(){
+                var $index = $(this).index();
+                var height = $('body').height();
+                var h = $index * height;
+                $('.main').stop().animate({'marginTop':'-'+h},500);
+            })
+            var num = 0;
+            $(window).scroll(function(){
+                var height = $('body').height();
+                num++;
+                var h = num * height;
+                $('.main').stop().animate({'marginTop':'-'+h},500);
+            })
+           /* var timer = null;
+            var left = 500;
+            var num = 0;
+            function right(){
+                num++;
+                if(num>2)
+                {
+                    num=0;
+                }
+                var wd = num * left;
+                $('.main').stop().animate({'marginLeft':-wd});
+            }
+            timer = setInterval(function(){
+                var ml = $('.main').css("marginLeft");
+                if(ml = '-'+500){
+                    $('b2').css({'transform':'rotate(180deg)'});
+                }
+                right();
+            },3000);*/
+        })
+    </script>
+</body>
+</html>

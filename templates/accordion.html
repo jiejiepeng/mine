@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 500px;
+            height: auto;
+            margin: 100px auto;
+        }
+        .accd{
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            transition:all 0.5s ease-in 0s;
+            color: #ffffff;
+        }
+        .acc{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: 微软雅黑;
+            font-size: 25px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .down{
+            float: right;
+            line-height: 50px;
+            font-size: 30px;
+            margin-right: 20px;
+            transition:all 0.5s ease-out 0s;
+        }
+        .up{
+            transform:rotate(180deg);
+        }
+        .set_down{
+            transform: rotate(0deg);
+        }
+        .myul{
+            list-style-type: none;
+            width: 100%;
+            height: 150px;
+        }
+        .myul li{
+            width: 100%;
+            height: 50px;
+            background: rgb(45, 44, 65);
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .myul li:hover{
+            color: rgb(182,59,77);
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.accd').click(function(){
+                var $index = $(this).index();
+                if($(this).css("height") == 50+'px')
+                {
+                    $(this).css({'height':'200'}).siblings().css({'height':'50'});
+                    $('.down').eq($index).addClass('up');
+                }
+               else{
+                    $(this).css({'height':'50'});
+                    $('.down').removeClass('up');
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="accd">
+        <div class="acc">Design Web <span class="down glyphicon glyphicon-chevron-down"></span>
+            <ul class="myul">
+                <li>Design Web</li>
+                <li>Design Web</li>
+                <li>Design Web</li>
+            </ul>
+        </div>
+        </div>
+        <div class="accd">
+        <div class="acc">Desarrollo front-end <span class="down glyphicon glyphicon-chevron-down"></span>
+            <ul class="myul">
+                <li>Desarrollo front-end</li>
+                <li>Desarrollo front-end</li>
+                <li>Desarrollo front-end</li>
+            </ul>
+        </div>
+        </div>
+        <div class="accd">
+        <div class="acc">Design responsive <span class="down glyphicon glyphicon-chevron-down"></span>
+            <ul class="myul">
+                <li>Design responsive</li>
+                <li>Design responsive</li>
+                <li>Design responsive</li>
+            </ul>
+        </div>
+        </div>
+        <div class="accd">
+        <div class="acc">Posicionamiento web<span class="down glyphicon glyphicon-chevron-down"></span>
+            <ul class="myul">
+                <li>Posicionamiento web</li>
+                <li>Posicionamiento web</li>
+                <li>Posicionamiento web</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

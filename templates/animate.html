@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DDDD</title>
+    <link rel="stylesheet" href="../static/css/swiper-3.4.1.min.css"/>
+    <link rel="stylesheet" href="../static/css/animate.min.css"/>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .ani{
+            animation-timing-function:ease-out;
+        }
+        .swiper-container{
+            width: 50%;
+            height: 500px;
+            margin: 0 auto;
+        }
+        .swiper-wrapper{
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition-timing-function:ease-out;
+        }
+        /*第一个张*/
+        .one{
+            width: 100%;
+            height: 100%;
+            background: url("../static/images/keji1.jpg");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        .fir-ani{
+            width: 40%;
+            height: auto;
+            position: absolute;
+            left: 30px;
+            top: 40%;
+            cursor: pointer;
+           /* animation: mine 2s;*/
+        }
+       /* .fir-ani:hover{
+            animation: shake 1s;
+        }*/
+        .fir-ani img{
+            width: 100%;
+            height: auto;
+        }
+        .sec-ani{
+            width: 50%;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            cursor: pointer;
+        }
+        .sec-ani img{
+            width: 100%;
+            height: auto;
+        }
+        /*第一张结束*/
+        .two{
+            width: 100%;
+            height: 100%;
+            background: url("../static/images/keji2.jpg");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        .three{
+            width: 100%;
+            height: 100%;
+            background: url("../static/images/keji3.jpg");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        .four{
+            width: 100%;
+            height: 100%;
+            background: url("../static/images/keji4.jpg");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        .five{
+            width: 100%;
+            height: 100%;
+            background: url("../static/images/sky5.jpg");
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="one">
+            <div class="fir-ani ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="../static/images/sky1.jpg" alt=""/>
+            </div>
+            <div class="sec-ani ani" swiper-animate-effect="flipInY" swiper-animate-duration="1s" swiper-animate-delay="0.2s">
+                <img src="../static/images/sky2.jpg" alt=""/>
+            </div>
+        </div>
+    </div><!--第一张-->
+    <div class="swiper-slide">
+        <div class="two">
+        <div class="fir-ani ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+            <img src="../static/images/sky1.jpg" alt=""/>
+        </div>
+        <div class="sec-ani ani" swiper-animate-effect="rollIn" swiper-animate-duration="1s" swiper-animate-delay="0.2s">
+            <img src="../static/images/sky2.jpg" alt=""/>
+        </div>
+    </div></div><!--第二张-->
+    <div class="swiper-slide">
+        <div class="three">
+            <div class="fir-ani ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+                <img src="../static/images/sky1.jpg" alt=""/>
+            </div>
+            <div class="sec-ani ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1s" swiper-animate-delay="0.2s">
+                <img src="../static/images/sky2.jpg" alt=""/>
+            </div>
+        </div>
+    </div><!--第三张-->
+    <div class="swiper-slide"><div class="four">
+        <div class="fir-ani ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">
+            <img src="../static/images/sky1.jpg" alt=""/>
+        </div>
+        <div class="sec-ani ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.2s">
+            <img src="../static/images/sky2.jpg" alt=""/>
+        </div>
+    </div></div><!--第四张-->
+    <div class="swiper-slide"><div class="five">
+        <div class="fir-ani ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+            <img src="../static/images/sky1.jpg" alt=""/>
+        </div>
+        <div class="sec-ani ani" swiper-animate-effect="shake" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+            <img src="../static/images/sky2.jpg" alt=""/>
+        </div>
+    </div></div><!--第五张-->
+    </div>
+    <!--轮播结束-->
+    <div class="swiper-pagination"></div><!--导航条-->
+    <!--<div class="swiper-scrollbar"></div>--><!--滚动条-->
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- 如果需要滚动条 -->
+    <!--<div class="swiper-scrollbar"></div>-->
+</div>
+
+<script src="../static/js/swiper-3.4.1.min.js"></script>
+<script src="../static/js/swiper.animate1.0.2.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        },
+        /*animate动画初始化*/
+        loop:true,/*循环播放*/
+        pagination: '.swiper-pagination',/*导航栏*/
+        paginationClickable: true,/*导航可点击*/
+        spaceBetween: 10,/*间隔*/
+        autoplay:3000,/*自动播放*/
+        speed:500,/*切换速度*/
+        effect:'coverflow',/*切换特效*/
+       /* slidesPerView:2,*//*slides显示的个数*/
+        centeredSlides:true,/*居中显示*/
+        autoplayDisableOnInteraction:false,/*手残滑动后是否取消自动播放*/
+        keyboardControl:true,/*键盘控制*/
+        mousewheelControl : true,/*鼠标控制*/
+        mousewheelReleaseOnEdges : true,/*鼠标滑到底禁用*/
+
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+
+</script>
+</body>
+</html>
